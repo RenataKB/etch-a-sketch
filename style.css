@@ -1,0 +1,17 @@
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.square {
+    background-color: honeydew;
+    border-style: solid;
+    border-color: gray;
+    width: 30px;
+    height: 30px;
+}
