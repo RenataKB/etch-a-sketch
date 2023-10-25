@@ -1,6 +1,16 @@
-div {
+body {
+    display: flex;
+    justify-content: center;
+}
+
+div.container {
     display: flex;
     flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    max-width: 480px;
+    max-height: 480px;
 }
 
 div.row {
@@ -9,9 +19,6 @@ div.row {
 }
 
 div.square {
-    background-color: honeydew;
-    border-style: solid;
-    border-color: gray;
     width: 30px;
     height: 30px;
 }
