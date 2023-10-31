@@ -19,9 +19,11 @@ function createGrid(size=16) {
 
 function colorSquare() {
     const squares = document.querySelectorAll('div.square');
+    const mainColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
+            square.style.backgroundColor = mainColor;
+            square.style.opacity = (parseFloat(square.style.opacity) || 0) + 0.1;
         });
     });
 }
@@ -47,7 +49,9 @@ resetButton.addEventListener('click', () => {
     const squares = document.querySelectorAll('div.square');
     squares.forEach((square) => {
         square.style.backgroundColor = 'white';
+        square.style.opacity = 0;
     });
+    colorSquare();
 });
 
 createGrid();
